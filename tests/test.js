@@ -1,5 +1,5 @@
 /* Headless checks for Visual Ad Block: runs content.js inside jsdom against the
- * demo page (with stubbed layout, since jsdom has none).
+ * test page (with stubbed layout, since jsdom has none).
  *   node .harness/test.js
  */
 'use strict';
@@ -9,11 +9,11 @@ const path = require('path');
 const { JSDOM } = require('jsdom');
 
 const ROOT = path.join(__dirname, '..');
-const html = fs.readFileSync(path.join(ROOT, 'demo', 'index.html'), 'utf8');
+const html = fs.readFileSync(path.join(ROOT, 'test-page.html'), 'utf8');
 const source = fs.readFileSync(path.join(ROOT, 'content.js'), 'utf8');
 
 const dom = new JSDOM(html, {
-  url: 'http://localhost/demo/',
+  url: 'http://localhost/test-page.html',
   runScripts: 'outside-only',
   pretendToBeVisual: true
 });
@@ -82,7 +82,7 @@ window.chrome = {
 window.scrollX = 0;
 window.scrollY = 0;
 
-/* ---------- the ad slots in the demo page, with fake geometry ---------- */
+/* ---------- the ad slots in the test page, with fake geometry ---------- */
 const skyscraper = document.querySelector('ins.adsbygoogle');
 const banner = document.getElementById('top-banner');
 const inArticle = document.getElementById('div-gpt-ad-1234567890-0');

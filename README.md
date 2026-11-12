@@ -19,10 +19,10 @@ Chromium-based browsers all work: Chrome, Edge, Brave, Vivaldi, Opera, Arc.
 
 ## Try it
 
-- **Fastest:** open `demo/index.html` in the browser, then reload it. If you opened it as a
+- **Fastest:** open `test-page.html` in the browser, then reload it. If you opened it as a
   `file://` URL, enable **Allow access to file URLs** on the extension's details page first.
 - **Or serve it:** `python3 -m http.server 8000` in this folder, then open
-  <http://localhost:8000/demo/>. The demo has a leaderboard, a left skyscraper, in-article slots, a
+  <http://localhost:8000/test-page.html/>. The test has a leaderboard, a left skyscraper, in-article slots, a
   sidebar slot, buttons to add / slide / close ads, and a control block with classes like
   `download` and `header` that must stay visible.
 
@@ -90,6 +90,6 @@ manifest.json      MV3 manifest (storage permission + <all_urls> content script,
 content.js         detection, overlay layer, mutation/resize tracking, popup messaging
 popup.html/css/js  on/off switch, "ads covered on this page" count, reload button
 icons/             16/32/48/128 px icons
-demo/index.html    test page with real ad markup and add/slide/close simulations
+test-page.html    test page with real ad markup and add/slide/close simulations
 tools/make_icons.py  regenerates the icons (python3, no dependencies)
 ```

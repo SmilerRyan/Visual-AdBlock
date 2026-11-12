@@ -1,6 +1,6 @@
 /* Real-Chromium check for Visual Ad Block.
  *
- * Loads the extension into Chromium, opens the demo page, verifies the overlay
+ * Loads the extension into Chromium, opens the test page, verifies the overlay
  * against the live layout and refreshes the screenshots used by the popup.
  *
  *   cd visual-ad-block/tests && npm install && node shots.js
@@ -118,7 +118,7 @@ const hitAt = (page, x, y) =>
 
 (async () => {
   await new Promise((resolve) => server.listen(8123, '127.0.0.1', resolve));
-  const url = 'http://127.0.0.1:8123/demo/';
+  const url = 'http://127.0.0.1:8123/test-page.html';
 
   const baseEnv = { ...process.env };
   const localLibs = '/tmp/alibs/root/usr/lib/x86_64-linux-gnu';
