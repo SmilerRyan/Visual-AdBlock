@@ -146,32 +146,7 @@ h1 {
   color: var(--muted);
 }
 
-.gallery {
-  display: flex;
-  gap: 8px;
-  margin-top: 12px;
-}
 
-.gallery figure {
-  flex: 1 1 0;
-  min-width: 0;
-  margin: 0;
-}
-
-.gallery img {
-  display: block;
-  width: 100%;
-  height: auto;
-  border-radius: 6px;
-  border: 1px solid var(--line);
-  background: #f3f3f3;
-}
-
-.gallery figcaption {
-  margin-top: 4px;
-  font-size: 10.5px;
-  color: var(--muted);
-}
 
 .foot {
   display: flex;
