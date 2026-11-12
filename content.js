@@ -405,7 +405,7 @@
         const doc = el.contentDocument;
         return !!(doc && doc.body && doc.body.children.length);
       } catch (e) {
-        return true; // cross-origin: assume it painted something
+        return true;
       }
     }
 
