@@ -37,10 +37,10 @@
   const MIN_H = 20;
   const TICK_MS = 350;
   const COMMIT_DELAY = 120;
-  const FULL_SWEEP_EVERY = 3; // full DOM sweeps are expensive; only do every 3rd commit
+  const FULL_SWEEP_EVERY = 3;
   const MAX_ELEMENTS_FOR_SWEEP = 20000;
-  const CLUSTER_GAP = 8; // px between two ad boxes that still counts as one area
-  const CLUSTER_GROWTH = 3; // never merge into a cluster larger than 3x the bigger ad
+  const CLUSTER_GAP = 8;
+  const CLUSTER_GROWTH = 3;
   const MAX_CAPTION_REASONS = 4;
 
   /* ------------------------------------------------------------------ *
