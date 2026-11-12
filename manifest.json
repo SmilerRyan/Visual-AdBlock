@@ -4,7 +4,9 @@
   "version": "1.0.0",
   "description": "Paints a plain gray \"AD\" box over ads. Ads are not blocked and trackers are not touched - they are only hidden from view.",
   "minimum_chrome_version": "102",
-  "permissions": ["storage"],
+  "permissions": [
+    "storage"
+  ],
   "action": {
     "default_title": "Visual Ad Block",
     "default_popup": "popup.html",
@@ -23,8 +25,12 @@
   },
   "content_scripts": [
     {
-      "matches": ["<all_urls>"],
-      "js": ["content.js"],
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "content.js"
+      ],
       "run_at": "document_idle",
       "all_frames": true,
       "match_about_blank": false
