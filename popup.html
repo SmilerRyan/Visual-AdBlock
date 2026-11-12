@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Visual Ad Block</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <header class="bar">
+      <div class="mark" aria-hidden="true">AD</div>
+      <div class="titles">
+        <h1>Visual Ad Block</h1>
+        <p id="status">Covering ads</p>
+      </div>
+      <label class="switch">
+        <input type="checkbox" id="toggle" checked />
+        <span class="track"><span class="knob"></span></span>
+        <span class="sr-only">Cover ads on this page</span>
+      </label>
+    </header>
+
+    <main class="body">
+      <div class="stat">
+        <span id="count">–</span>
+        <span class="stat-label" id="count-label">ads covered on this page</span>
+      </div>
+      <p class="hint">
+        Ads still load and still work &mdash; they are only hidden behind a gray box. Hover a box to
+        peek behind it, click one to hide that cover until the ad changes. No requests are blocked
+        and no trackers are touched.
+      </p>
+
+      <section class="gallery" aria-label="Example">
+        <figure>
+          <img src="screenshots/popup-before.png" alt="An in-article ad as the page serves it" />
+          <figcaption>Without</figcaption>
+        </figure>
+        <figure>
+          <img src="screenshots/popup-after.png" alt="The same ad covered by a gray AD box" />
+          <figcaption>With Visual Ad Block</figcaption>
+        </figure>
+      </section>
+    </main>
+
+    <footer class="foot">
+      <span>v1.0.0</span>
+      <button id="reload" type="button">Reload page</button>
+    </footer>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
